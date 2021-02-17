@@ -1,0 +1,218 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: "Open Sans", sans-serif;
+    text-align: center; 
+    box-sizing: border-box;
+    font-size: 115%;
+    background-color: darkgray;
+    height: 100%;
+    padding: 20px 10px;
+}
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover {
+  outline:0px !important;
+  -webkit-appearance:none;
+}
+
+#wrapper {
+    max-width: 610px;
+    text-align: left;
+    margin: 0px auto;
+    background-color: whitesmoke;
+    border-top: 50px solid black;
+    border-right: 20px solid black;
+    border-bottom: 50px solid black;
+    border-left: 20px solid black;
+    border-radius: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#chatBox{
+    height: 85%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#compose-area {
+    height: 15%;
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+}
+  
+textarea {
+    position:absolute;
+    padding:20px 20px;
+    background:#C4B7E1;
+    border:0;
+    margin:0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    font-size: 120%;
+    padding: .5em 10% .5em 2%;
+}
+  
+#sendButton {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    background-size: contain;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 1px;
+    border: none;
+    border-radius: 2px;
+    background-image: url("send.png");
+}
+
+a:link, :visited {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: blue;
+    display: list-item;
+    list-style-type: none;
+    margin-left: inherit;;
+}
+
+ol {
+    list-style-type: disc;
+    margin: 5px 5px 5px 5px;
+}
+
+.chat-container {
+    word-wrap: break-word;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.chat-bot {
+    background-color: #DCDCDC;
+    padding: 7px 15px;
+    float: left;
+    width: 65%;
+    margin: 0px 36% 10px 5%;
+    border-radius: 0px 20px 20px 20px;
+    box-sizing: border-box;
+    box-shadow: -3px 3px darkgrey;
+    min-height: 2em;
+}
+
+.chat-user {
+    background-color: #9370DB;
+    padding: 7px 15px;
+    text-align: right;
+    border-radius: 20px 0px 20px 20px;
+    float: left;
+    width: 65%;
+    margin: 0px 4% 10px 30%;
+    box-sizing: border-box;
+    box-shadow: 3px 3px #C4B7E1;
+    min-height: 2em;
+}
+
+.suggestion,
+#inChat,
+#helpful{
+    display: list-item;
+    list-style-type: disc;
+    margin: 7px 5px 7px 18px;
+    font-size: 90%;
+    text-align: left;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 7px 10px;
+    padding-right: 16px;
+    border: 1px solid #2bb885;
+    border-radius: 20px;
+    float: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-color: rgb(43, 184, 133);
+    background-color: White;
+    color: rgb(43, 184, 133);
+}
+
+.blink {
+    /* setting the animation duration to be 1 second, and then 
+    I am setting the timing to linear. 
+    That means it will be constant throughout. 
+    Last, I am using infinite. That means it will go on and on. */
+    animation: blinker 1s linear infinite;
+    font-size: 130%;
+    font-weight: bold;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
+
+.suggestion:hover,
+#inChat:hover,
+#helpful:hover {
+    filter: brightness(80%);
+}
+
+.avatar {
+    position: absolute;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-color: darkgray;
+    border: 2px solid darkgray;
+    border-radius: 2px;
+    
+}
+.avatar-prompts {
+    position: relative;
+    top: 4px; /*top:50%没用因为父亲的top是0px  */
+    margin-left: 0px;
+    margin-right: 8px;
+    background-image: url("circle.png");
+    width: 13px;
+    height: 13px;
+    border: none;
+    background-color:transparent;
+}
+
+.avatar-bot {
+    left: -15px;
+    background-image: url("chat.png");
+  }
+  
+.avatar-user {
+    right: -15px;
+    background-image: url("chat.png");
+}
